@@ -1,6 +1,3 @@
-#!/bin/bash
-#
-#
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -17,19 +14,7 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-#
-
-# This script removes the org.apache.tinkerpop directory from the "grapes" directory. This
-# script assumes that an environment variable of GROOVY_GRAPES is set with the location
-# of the grapes directory.  Otherwise, it will set that value to the standard location
-# of ~/.groovy/grapes which is common for most installations.  Usage:
-#
-# bin/clean-grapes.sh
-
-if [ -z "${GROOVY_GRAPES:-}" ]; then
-    GROOVY_GRAPES=~/.groovy/grapes
-fi
-
-GRAPES_TP="$GROOVY_GRAPES/org.apache.tinkerpop"
-
-rm -rf $GRAPES_TP
+gremlin: {
+  graph: org.apache.tinkerpop.gremlin.structure.util.GraphFactoryTest$MockGraph }
+keep: it
+x = y{]
